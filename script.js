@@ -38,24 +38,25 @@ function palindrom() {
 	for (var i = 0; i < rec.length; i++){
 		unetaRec.push(rec[i]);	
 	}
-	//console.log(unetaRec);
+	console.log(unetaRec);
+
+	var unetaString = unetaRec.join('');
 
 	for (var j = unetaRec.length - 1; j >= 0; j--){
 		obrnutaRec.push(unetaRec[j]);
 			
 	}
-	//console.log(obrnutaRec);
+	console.log(obrnutaRec);
 
-	for (var e = 0; e < unetaRec.length; e++) {
+	var obrnutaString = obrnutaRec.join('');
 
-		for(var b = 0; b < obrnutaRec.length; b++){
 
-			if (unetaRec[e] === obrnutaRec[b]) {
-				return document.getElementById("one").innerHTML = rec + " jeste palindrom. Bravo!"
-			}
-			else {
-				return document.getElementById("one").innerHTML = rec + " nije palindrom... Probaj drugu rec!"
-			}
-		}
+	if (unetaString !== obrnutaString) {
+				
+		return document.getElementById("one").innerHTML = rec + " nije palindrom... Probaj drugu rec!";
 	}	
+	else
+	
+	return document.getElementById("one").innerHTML = rec + " jeste palindrom. Bravo!";
+
 }
